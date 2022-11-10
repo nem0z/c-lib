@@ -1,0 +1,6 @@
+*.a
+*.o
+*.out
+/my_lib/*.a
+/my_lib/*.o
+/my_lib/*.out
