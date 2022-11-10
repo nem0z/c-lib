@@ -16,7 +16,9 @@ int main(int argc, char *argv[]) {
     // Example for my_strsep
 
     char * copy_origin_ptr = copy;
-    printf("%s\n", my_strsep(&copy, ' '));
+    char * start_of_string = my_strsep(&copy, ' ');
+
+    printf("%s\n", start_of_string);
     printf("%s\n", copy);
 
     // Exemple for my_split
@@ -44,9 +46,11 @@ int main(int argc, char *argv[]) {
     for(unsigned int i = 0; world_array[i] != NULL; ++i) {
         free(world_array[i]);
     }
+
     free(world_array);
     free(copy_origin_ptr);
     free(number_as_char);
+    free(start_of_string);
 
     return 0;
 }
